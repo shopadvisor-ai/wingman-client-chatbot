@@ -41,6 +41,7 @@
     "@mui/x-date-pickers": "6.19.5",
     "@phosphor-icons/react": "2.0.15",
     "@react-pdf/renderer": "3.3.8",
+    "@sendbird/uikit-react": "^3.14.5",
     "@tiptap/extension-link": "2.2.4",
     "@tiptap/extension-placeholder": "2.2.4",
     "@tiptap/react": "2.2.4",
