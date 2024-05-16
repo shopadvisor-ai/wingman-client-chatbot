@@ -13,6 +13,7 @@ import { X as XIcon } from '@phosphor-icons/react/dist/ssr/X';
 import { GroupChannel } from '@sendbird/uikit-react/GroupChannel';
 import SendbirdProvider from '@sendbird/uikit-react/SendbirdProvider';
 import '@sendbird/uikit-react/dist/index.css';
+import { UpscopeProvider } from '@upscopeio/react';
 
 import type { Settings } from '@/types/settings';
 
@@ -43,6 +44,7 @@ export function SettingsDrawer({
   );
 
   return (
+    <UpscopeProvider apiKey="jNTQfqS1qE" enabled uniqueId="nalin-demo">
     <Drawer
       ModalProps={{ BackdropProps: { invisible: true }, sx: { zIndex: 1400 } }}
       PaperProps={{
@@ -161,8 +163,6 @@ export function SettingsDrawer({
             <GroupChannel
               channelUrl="sendbird_group_channel_248464089_60e521506458d7d08b2babaa87d7d6e6fc83a8ed"
               renderChannelHeader={() => <>{null}</>}
-              // renderMessageContent={() => <>{null}</>}
-              // renderSuggestedReplies={renderSuggestedReplies}
             />
           </SendbirdProvider>
         
@@ -180,5 +180,6 @@ export function SettingsDrawer({
         </Typography>
       </Stack>
     </Drawer>
+    </UpscopeProvider>
   );
 }
